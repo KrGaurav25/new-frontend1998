@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import MyEmployees from './MyEmployees';
 import { useNavigate } from 'react-router-dom';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'
@@ -26,7 +27,8 @@ const AdminNav=()=>{
             <Link to='/admindashboard' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>Home</h4></Link>
             <Link to='/addjobs' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>Add Jobs</h4></Link>
             <Link to='/myjobs' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>My Jobs</h4></Link>
-            <Link to='/Applicants' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>View Job Applicants</h4></Link>
+            <Link to='/Applicants' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>Applicants</h4></Link>
+            <Link to='/myEmployees' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>My Employees</h4></Link>
             <Link to='/profileadmin' style={{textDecoration: 'none', color:"white", margin:'0.5rem'}}><h4 className='nav-icon'>Profile</h4></Link>
             <i className='fa fa-sign-out 'style={{textDecoration: 'none', color:"white", margin:'0.5rem'}} onClick={logoutMethod} ><h4 className='nav-icon'>Logout</h4></i>
             {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
@@ -43,15 +45,6 @@ const AdminNav=()=>{
               Link
             </Nav.Link> */}
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

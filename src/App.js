@@ -20,6 +20,7 @@ import ResumeUpload from './Pages/Userdashboard/ResumeUpload';
 import AdminDashboard from './Pages/Admin/Navbar/AdminDashboard';
 import UpdateJobs from './Pages/Admin/Navbar/UpdateJobs';
 import Wishlist from './Pages/Userdashboard/Wishlist';
+import MyEmployees from './Pages/Admin/Navbar/MyEmployees';
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
         <Route path="/resume" element={<ResumeUpload></ResumeUpload>}></Route>
         <Route path='/updatejobs/:id' element={<UpdateJobs/>}/>
         <Route path='/wishlist' element={<Wishlist />} />
+        <Route path='/myEmployees' element={<MyEmployees />} />
+
 
 
 
