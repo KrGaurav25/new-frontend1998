@@ -13,9 +13,6 @@ function ViewJobApplicant() {
   const dispatch = useDispatch();
   const { data: Applicant, status } = useSelector((state) => state.applicants);
   const [app, setApp] = useState(Applicant)
-  // useEffect(() => {
-  //   dispatch(fetchApplicants());
-  // }, [])
   const handleJobs=(e)=>{
     // e.preventDefault();
     dispatch(fetchApplicants());
@@ -51,6 +48,8 @@ function ViewJobApplicant() {
   const handleAccept = (id) => {
     alert(id._id + " is Accepted");
     dispatch(add(id))
+    const newData= app.filter((item)=>item._id!==id._id)
+    setApp(newData)
   };
   // if (status === STATUSES.LOADING){
   //   return <h2>LOADING....</h2>
