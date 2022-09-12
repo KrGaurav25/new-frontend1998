@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
-import { createAsyncThunk, current } from '@reduxjs/toolkit'
 export const STATUSES = Object.freeze({
     IDLE: 'idle',
     LOADING: 'loading',
@@ -18,11 +17,14 @@ const applicantSlice = createSlice({
         },
         setStatus(state, action) {
             state.status = action.payload;
-        }
+        },
+        removeApplicant(state, action) {
+            return state.filter((item) => item._id !== action.payload)
+        },
     }
 });
 
-export const { setApplicant, setStatus } = applicantSlice.actions;
+export const { setApplicant, setStatus, removeApplicant } = applicantSlice.actions;
 export default applicantSlice.reducer;
 
 //Thunks
